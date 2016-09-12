@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   private
+    # whitelist the parameters to be saved
     def article_params
       params.require(:article).permit(:title, :description)
     end
